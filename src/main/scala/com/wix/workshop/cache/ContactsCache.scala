@@ -1,19 +1,24 @@
 package com.wix.workshop.cache
 
-import com.wix.workshop.model.Contact
+import com.wix.workshop.model.{Contact, ContactId}
+
+import scala.collection.immutable.HashMap
 
 class ContactsCache {
 
-  var contacts: Seq[Contact] = Nil
+  var contacts: Map[ContactId, Contact] = HashMap.empty
 
-  def getContact(contact: Contact): Contact = {
-    if(contacts.contains(contact)){
-      contact
-    } else {
-      contacts = contacts :+ contact
-      contact
+  def getContact(contactId: ContactId): Contact = {
+    contacts.get(contactId) match {
+      case Some(contact) => contact
+      case None =>
+        val contact = getContactFromDB(contactId)
+        contacts += contactId -> contact
+        contact
     }
   }
 
-
+  def getContactFromDB(contactId: ContactId) = {
+    Contact(contactId.id, "firstName", "lastName", "address", "city", "zipCode")
+  }
 }
