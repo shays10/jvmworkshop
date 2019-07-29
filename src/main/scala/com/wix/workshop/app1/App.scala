@@ -1,13 +1,13 @@
-package com.wix.workshop
+package com.wix.workshop.app1
 
-import com.wix.workshop.cache.ContactsCache
-import com.wix.workshop.model.{Contact, ContactId}
+import com.wix.workshop.app1.cache.ContactsCache
+import com.wix.workshop.app1.model.ContactId
 
 /**
  * @author ${user.name}
  */
 object App {
-  
+
   def main(args : Array[String]) {
     val cache = new ContactsCache
     while(true) {

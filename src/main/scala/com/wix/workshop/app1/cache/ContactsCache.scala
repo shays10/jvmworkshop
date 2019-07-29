@@ -1,6 +1,6 @@
-package com.wix.workshop.cache
+package com.wix.workshop.app1.cache
 
-import com.wix.workshop.model.{Contact, ContactId}
+import com.wix.workshop.app1.model.{Contact, ContactId}
 
 import scala.collection.immutable.HashMap
 

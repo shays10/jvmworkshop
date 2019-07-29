@@ -1,4 +1,4 @@
-package com.wix.workshop.model
+package com.wix.workshop.app1.model
 
 import scala.util.Random
 
