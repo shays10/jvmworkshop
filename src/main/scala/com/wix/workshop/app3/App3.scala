@@ -5,7 +5,7 @@ import com.wix.workshop.app1.model.Contact
 object App3 {
 
   def main(args: Array[String]) {
-    java.util.concurrent.Executors.newFixedThreadPool(2)
+   /* java.util.concurrent.Executors.newFixedThreadPool(2)
     for (_ <- 1 to 10) {
       val thread = new Thread(() => {
         manager.add(contact)
@@ -15,7 +15,7 @@ object App3 {
       })
       thread.start()
       thread2.start()
-    }
+    }*/
   }
 
 }

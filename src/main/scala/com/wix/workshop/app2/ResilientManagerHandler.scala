@@ -13,7 +13,7 @@ class ResilientManagerHandler {
   def add(contact: Contact) = {
     lockA.synchronized({
       lockB.synchronized( {
-        //TODO: add impl
+        Thread.sleep(10)
       })
     })
   }
@@ -21,7 +21,7 @@ class ResilientManagerHandler {
   def removeFirst() = {
     lockB.synchronized({
       lockA.synchronized( {
-        //TODO: add impl
+        Thread.sleep(10)
       })
     })
   }
