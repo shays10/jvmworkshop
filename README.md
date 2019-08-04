@@ -45,5 +45,5 @@ App #4
 2. Run it with a JVM flag to automatically take a heap dump on OOM.
 3. Investigate the heap dump. 
 4. Run the app again, this time with -Xmx???
-5. Monitor it. Do you think there is there a leak? (Solution is here ???)
+5. Monitor it. Do you think there is a leak? (Solution is here ???)
 
