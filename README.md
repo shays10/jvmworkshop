@@ -36,9 +36,8 @@ App #2
 
 App #3
 ------
-1. In your terminal navigate to ??? a and run ???. Your app is now running.
-2. Again, monitor it in Visual VM, what do you see? (If it already try to rerun it and be a bit quicker!)
-3. Open the source code and try to fix the problem (solution is here ????)
+1. In your terminal navigate to ??? a and run ???. Your app has crashed.
+2. Open the source code and try to fix the problem (solution is here ????)
 
 App #4
 ------
