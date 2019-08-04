@@ -1,21 +1,19 @@
 package com.wix.workshop.app3
 
-import com.wix.workshop.app1.model.Contact
+import scala.concurrent.{ExecutionContext, Future}
 
 object App3 {
 
   def main(args: Array[String]) {
-   /* java.util.concurrent.Executors.newFixedThreadPool(2)
-    for (_ <- 1 to 10) {
-      val thread = new Thread(() => {
-        manager.add(contact)
-      })
-      val thread2 = new Thread(() => {
-        manager.removeFirst()
-      })
-      thread.start()
-      thread2.start()
-    }*/
+    val ectx = ExecutionContext.fromExecutorService(java.util.concurrent.Executors.newFixedThreadPool(10))
+    for (i <- 1 to 100000) {
+      myFuture(i)(ectx)
+    }
+  }
+
+  def myFuture(i: Int)(implicit ec: ExecutionContext): Future[Int] = Future {
+    Thread.sleep(500)
+    i
   }
 
 }
