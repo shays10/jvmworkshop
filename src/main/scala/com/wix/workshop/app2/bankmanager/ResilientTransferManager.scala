@@ -1,4 +1,6 @@
-package com.wix.workshop.app2
+package com.wix.workshop.app2.bankmanager
+
+import com.wix.workshop.app2.model.Account
 
 case class LockObject()
 

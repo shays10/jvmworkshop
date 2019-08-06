@@ -1,5 +1,8 @@
 package com.wix.workshop.app2
 
+import com.wix.workshop.app2.bankmanager.ResilientTransferManager
+import com.wix.workshop.app2.model.Account
+
 object App2 {
 
   def main(args: Array[String]) {
