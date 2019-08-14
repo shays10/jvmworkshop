@@ -1,9 +1,9 @@
 package com.wix.workshop.app1.model
 
-import scala.util.Random
+class ContactId(id: Long) {
+  override def hashCode(): Int = id.hashCode()
 
-case class ContactId(id: Long) {
-  override def hashCode(): Int = Random.nextInt() //FIXME: understand why we cant implement proper hashcode without equals
+  def getId: Long = id
 }
 
 case class Contact(id: Long, firstName: String, lastName: String, address: String, city: String, zipCode: String)

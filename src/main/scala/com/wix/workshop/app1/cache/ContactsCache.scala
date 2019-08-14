@@ -18,7 +18,7 @@ class ContactsCache {
     }
   }
 
-  def getContactFromDB(contactId: ContactId) = {
-    Contact(contactId.id, "firstName", "lastName", "address", "city", "zipCode")
+  def getContactFromDB(contactId: ContactId): Contact = {
+    Contact(contactId.getId, "firstName", "lastName", "address", "city", "zipCode") //This emulates a remote call to DB
   }
 }
