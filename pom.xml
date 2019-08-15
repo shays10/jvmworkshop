@@ -9,5 +9,6 @@
     <module>App2</module>
     <module>App3</module>
     <module>App4</module>
+    <module>App5</module>
   </modules>
 </project>
