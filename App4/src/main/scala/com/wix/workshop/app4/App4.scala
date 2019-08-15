@@ -6,8 +6,9 @@ import scala.io.Source
 object App4 {
 
   def main(args: Array[String]) {
-    scala.io.Source.fromResource("/title.basics.tsv").mkString
-
+    for (i <- 1 to 1000000) {
+      Source.fromFile("src/main/resources/title.basics.tsv").getLines()
+    }
   }
 
 

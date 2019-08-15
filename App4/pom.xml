@@ -5,22 +5,11 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
-    <name>${project.artifactId}</name>
-    <description>My wonderfull scala app</description>
-    <inceptionYear>2010</inceptionYear>
-    <licenses>
-        <license>
-            <name>My License</name>
-            <url>http://....</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-
     <properties>
-        <maven.compiler.source>1.6</maven.compiler.source>
-        <maven.compiler.target>1.6</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <encoding>UTF-8</encoding>
-        <scala.tools.version>2.10</scala.tools.version>
+        <scala.tools.version>2.12.8</scala.tools.version>
         <scala.version>2.12.8</scala.version>
     </properties>
 
@@ -29,26 +18,6 @@
             <groupId>org.scala-lang</groupId>
             <artifactId>scala-library</artifactId>
             <version>${scala.version}</version>
-        </dependency>
-
-        <!-- Test -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.specs2</groupId>
-            <artifactId>specs2_${scala.tools.version}</artifactId>
-            <version>1.13</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.scalatest</groupId>
-            <artifactId>scalatest_${scala.tools.version}</artifactId>
-            <version>2.0.M6-SNAP8</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 
@@ -74,40 +43,6 @@
                         </configuration>
                     </execution>
                 </executions>
-                <configuration>
-                    <launchers>
-                        <launcher>
-                            <id>app1</id>
-                            <mainClass>com.wix.workshop.app1.App</mainClass>
-                            <jvmArgs>
-                                <jvmArg>-Xmx12m</jvmArg>
-                            </jvmArgs>
-                        </launcher>
-                        <launcher>
-                            <id>app2</id>
-                            <mainClass>com.wix.workshop.app2.App2</mainClass>
-                            <jvmArgs>
-                                <jvmArg>-Xmx12m</jvmArg>
-                            </jvmArgs>
-                        </launcher>
-                        <!-- you could define other launcher -->
-                    </launchers>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.13</version>
-                <configuration>
-                    <useFile>false</useFile>
-                    <disableXmlReport>true</disableXmlReport>
-                    <!-- If you have classpath issue like NoDefClassError,... -->
-                    <!-- useManifestOnlyJar>false</useManifestOnlyJar -->
-                    <includes>
-                        <include>**/*Test.*</include>
-                        <include>**/*Suite.*</include>
-                    </includes>
-                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
