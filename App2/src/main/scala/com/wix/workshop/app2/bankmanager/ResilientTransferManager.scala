@@ -2,8 +2,6 @@ package com.wix.workshop.app2.bankmanager
 
 import com.wix.workshop.app2.model.Account
 
-case class LockObject()
-
 class ResilientTransferManager {
 
   def transfer(fromAccount: Account, toAccount: Account, amount: Double): Unit = {

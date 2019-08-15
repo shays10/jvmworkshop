@@ -6,6 +6,8 @@ import com.wix.workshop.app2.model.Account
 object App2 {
 
   def main(args: Array[String]) {
+    println("App2 Starting....")
+
     val manager = new ResilientTransferManager
     val fooAccount = Account(name = "Foo", balance = 1000)
     val barAccount = Account(name = "Bar", balance = 1000)

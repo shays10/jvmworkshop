@@ -8,6 +8,7 @@ import scala.util.Random
 object App {
 
   def main(args : Array[String]) {
+    println("App1 Starting....")
     val cache = new ContactsCache
     while(true) {
       cache.getContact(new ContactId(Random.nextInt(20)))
