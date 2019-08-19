@@ -6,9 +6,7 @@ import scala.io.Source
 object App4 {
 
   def main(args: Array[String]) {
-    for (i <- 1 to 1000000) {
-      Source.fromFile("src/main/resources/title.basics.tsv").getLines()
-    }
+    println(Source.fromFile("App4/src/main/resources/title.basics.tsv").getLines().size)
   }
 
 
