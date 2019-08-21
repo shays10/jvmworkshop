@@ -9,12 +9,16 @@ class ResilientTransferManager {
 
     fromAccount.synchronized({
       toAccount.synchronized({
-        fromAccount.balance -= amount
-        toAccount.balance += amount
+        transferInternal(fromAccount, toAccount, amount)
         Thread.sleep(5)
       })
     })
 
+  }
+
+  private def transferInternal(fromAccount: Account, toAccount: Account, amount: Double): Unit = {
+    fromAccount.balance -= amount
+    toAccount.balance += amount
   }
 }
 
