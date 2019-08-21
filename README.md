@@ -37,10 +37,14 @@ App #2
 4. You figured out what went wrong, awesome! Open the source code and try to fix the problem (while keeping the same logic that is being used)
 5. Rerun the app and make sure it completes successfully.
 
-App #3
-------
-1. In your terminal navigate to ??? a and run ???. Your app has crashed.
-2. Open the source code and try to fix the problem (solution is here ????)
+Airbnb Reviews Analyzer
+-----------------------
+The third app is an app and can read CSV file that contains reviews on Airbnb properties, parse it
+and figure out how many positive and negative reviews are there, using a super complex algorithm! 
+
+1. In your terminal navigate to `App3b` execute `/.compile.sh` and `./run.sh`. 
+2. This time, your app has crashed.
+3. Open the source code, understand the problem and mitigate it. (solution is here ????)
 
 App #4
 ------
