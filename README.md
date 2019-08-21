@@ -42,7 +42,7 @@ Run `./fast_run.sh`
 9. Investigate one of the heap dump. Find the offending class.
 10. Open the source code in your favorite IDE. Locate and try to fix the problem.
 
-Solution: link
+Solution [is here](/App1/solution/Solution.md)
 
 "The Always Correct Money Transfer" App
 ---------------------------------------
@@ -58,7 +58,7 @@ After completing it will print out the current balance of each account.
 4. You figured out what went wrong, awesome! Open the source code and try to fix the problem (while keeping our app "Always correct"!)
 5. Rerun the app and make sure it completes successfully.
 
-Solution: link
+Solution [is here](/App2/solution/Solution.md)
 
 "Airbnb Reviews Analyzer" App
 -----------------------
