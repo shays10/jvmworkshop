@@ -1,6 +1,6 @@
 package com.wix.workshop.app1.model
 
-class ContactId(id: Long) {
+class ContactId(val id: Long) {
   override def hashCode(): Int = id.hashCode()
 
   def getId: Long = id

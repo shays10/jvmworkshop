@@ -16,25 +16,40 @@ We will learn how to troubleshoot and diagnose JVM issues in our application usi
 
 Below you will find a list of sample apps. Simple, yet misbehaving apps. 
 
-App #1
-------
+"The Lightweight Contact Retriever"
+------------------------------------
+"The Lightweight Contact Retriever" application allows you to get any contact you'd like, and fast!
+It introduces a revolutionary cache mechanism that will save you plenty of time and network latency.
+When a contact request arrives, if the contact is already in the cache we will extract it from there. Otherwise,
+we'll call our remote and slow DB, cache the contact and return it.
 
-1. In your terminal navigate to `App1`, execute `/.compile.sh` and `./run.sh`. Your app is now running.
-2. In a spearate terminal window, locate your PID via jps. (It should be under the name `App1-1.0-SNAPSHOT-jar-with-dependencies.jar` 
+To test that it is working properly, let's fire up the server and see what happens
+
+1. In your terminal navigate to `App1`, execute `/.compile.sh` and `./run.sh`. Your jetty server should be up and running.
+2. In a separate terminal window, locate your PID via jps.
 3. Open VisualVM, locate your app and monitor it. 
-4. What is happening? Can you guess? 
-5. To investigate further, let's take a heap dump. Take it via:
+4. We created a shell script for you that will randomize numbers between 1 to 10 and send a `GET` request
+`curl http://localhost:8080?contactId=<contactNumber>`
+In order to generate load, run `./create_load.sh`. It will create 10,000 of those requests.
+5. Back to VisualVM. What is happening? Can you tell?
+6. Shutdown the process. 
+7. Let's try to simulate faster what will happen overtime. Let's increase the rate of request
+(by simply looping infinitely) and decrease the heap size.
+Run `./fast_run.sh`
+8. To investigate further, let's take a heap dump. Take it via:
   a. VisualVM
   b. jmap. (By running `jmap -dump:live,file=<filename> <pid>`)
-6. Investigate one of the heap dump. Can you locate the problem? (Try to use all of the information. Memory usage, CPU usage, GC behavior and the objects allocation tab)
-7. Open the source code in your favorite IDE. Locate and try to locate and fix the problem.
+9. Investigate one of the heap dump. Find the offending class.
+10. Open the source code in your favorite IDE. Locate and try to fix the problem.
+
+Solution: link
 
 "The Always Correct Money Transfer" App
 ---------------------------------------
 "The Always Correct Money Transfer" application allows you to safely and conveniently transfer money from one account to the other.
 It is keep your account safe and will withdraw more money than it should.
 
-To test it works properly, running our app will transfer 5$ from Foo account to Bar and 5$ from Bar account to Foo.
+To test that it is working properly, running our app will transfer 5$ from Foo account to Bar and 5$ from Bar account to Foo.
 After completing it will print out the current balance of each account.
 
 1. In your terminal navigate to `App2`, execute `/.compile.sh` and `./run.sh`. Your app is now running.
@@ -45,7 +60,7 @@ After completing it will print out the current balance of each account.
 
 Solution: link
 
-Airbnb Reviews Analyzer
+"Airbnb Reviews Analyzer" App
 -----------------------
 The third app is an app and can read CSV file that contains reviews on Airbnb properties, parse it
 and figure out how many positive and negative reviews are there, using a super complex algorithm! 

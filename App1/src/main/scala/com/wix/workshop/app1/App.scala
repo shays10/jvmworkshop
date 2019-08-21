@@ -1,18 +1,21 @@
 package com.wix.workshop.app1
 
-import com.wix.workshop.app1.cache.ContactsCache
-import com.wix.workshop.app1.model.ContactId
-
-import scala.util.Random
+import com.wix.workshop.app1.servlet.CacheServlet
+import org.eclipse.jetty.server.Server
+import org.eclipse.jetty.servlet.ServletHandler
 
 object App {
 
-  def main(args : Array[String]) {
+  def main(args: Array[String]) {
+
     println("App1 Starting....")
-    val cache = new ContactsCache
-    while(true) {
-      cache.getContact(new ContactId(Random.nextInt(20)))
-    }
+    val server = new Server(8080)
+    val handler = new ServletHandler()
+    server.setHandler(handler)
+    handler.addServletWithMapping(classOf[CacheServlet], "/*")
+    server.start()
+    server.join()
   }
+
 
 }
