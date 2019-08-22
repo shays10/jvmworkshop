@@ -1,23 +1,29 @@
-JVM Workshop
-------------
+# JVM Workshop
 
-Objectives & Installations
---------------------------
+
+## Objectives & Toolbox
 
 In today's workshop we will simulate common use cases of JVM problems you might run into when you application misbehaves.
 We will learn how to troubleshoot and diagnose JVM issues in our application using a our toolbox below:
 
-1. jps
-2. jmap
-2. Visual VM  (Install from https://github.com/visualvm/visualvm.src/releases/download/1.4.3/VisualVM_143.dmg)
-3. Visual VM GC Plugin (Install it via: Visual VM -> Tools -> Plugins)
-4. MAT (Install from https://www.eclipse.org/mat/downloads.php)
+`jps` - JVM Process Status Tool. Allows you to find the PID of your running JVMs.
 
+`jmap` - Memory Map. Allows you to take histograms and heapdumps.
+
+`jvisualvm`  - Allows you to monitor and troubleshoot apps on the JVM.
+All of them are already installed on your machine if you have JDK installed.
+
+## Optional Installations
+
+1. Visual VM GC Plugin (Install it via: Visual VM -> Tools -> Plugins)
+2. MAT - Eclipse Memory Analyzer. A feature-rich Java heap analyzer that allows you to analyze larger heap dumps easily (https://www.eclipse.org/mat/downloads.php)
+
+
+## Let's Start!
 
 Below you will find a list of sample apps. Simple, yet misbehaving apps. 
 
-"The Lightweight Contact Retriever"
-------------------------------------
+### "The Lightweight Contact Retriever"
 "The Lightweight Contact Retriever" application allows you to get any contact you'd like, and fast!
 It introduces a revolutionary cache mechanism that will save you plenty of time and network latency.
 When a contact request arrives, if the contact is already in the cache we will extract it from there. Otherwise,
@@ -44,8 +50,7 @@ Run `./fast_run.sh`
 
 Solution [is here](/App1/solution/Solution.md)
 
-"The Always Correct Money Transfer" App
----------------------------------------
+### "The Always Correct Money Transfer" App
 "The Always Correct Money Transfer" application allows you to safely and conveniently transfer money from one account to the other.
 It is keep your account safe and will withdraw more money than it should.
 
@@ -60,8 +65,7 @@ After completing it will print out the current balance of each account.
 
 Solution [is here](/App2/solution/Solution.md)
 
-"Airbnb Reviews Analyzer" App
------------------------
+### "Airbnb Reviews Analyzer" App
 The third app is an app and can read CSV file that contains reviews on Airbnb properties, parse it
 and figure out how many positive and negative reviews are there, using a super complex algorithm! 
 
@@ -69,8 +73,7 @@ and figure out how many positive and negative reviews are there, using a super c
 2. This time, your app has crashed.
 3. Open the source code, understand the problem and mitigate it. (solution is here ????)
 
-"YouTube likes statistics" App
------------------------
+### "YouTube likes statistics" App
 The forth app is an app and can read CSV files that contains data on youtube videos such as: views, likes reviews dates and more 
 the app goes over the data and calculates the average likes for video per country.
 
@@ -81,11 +84,6 @@ the app goes over the data and calculates the average likes for video per countr
 5. Monitor it. Do you think there is a leak? (Solution is here ???)
 
 
-Solutions
----------
-App1
 
-
-Reading Materials
------------------
+## Reading Materials
 
