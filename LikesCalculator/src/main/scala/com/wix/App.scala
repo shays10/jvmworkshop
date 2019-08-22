@@ -7,7 +7,7 @@ import org.eclipse.jetty.servlet.ServletHandler
 object App {
 
   def main(args: Array[String]) {
-    println("YouTube likes statistics app Starting....")
+    println("YouTube Likes Calculator Starting....")
     val server = new Server(8080)
     val handler = new ServletHandler()
     server.setHandler(handler)

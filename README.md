@@ -92,6 +92,8 @@ The app goes over the data and calculates the average likes for video per countr
 4. Run the app again, this time with -Xmx???
 5. Monitor it. Do you think there is a leak? (Solution is here ???)
 
+Solution [is here](/LikesCalculator/solution/Solution.md)
+
 ### "Thread Super-UUID Generator" App
 The Thread Super-UUID Generator is an app that can that all 
  

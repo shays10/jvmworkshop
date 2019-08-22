@@ -8,7 +8,7 @@
     <module>ContactRetriever</module>
     <module>MoneyTransfer</module>
     <module>AirbnbReviews</module>
-    <module>App4a</module>
+    <module>LikesCalculator</module>
     <module>App5</module>
   </modules>
 </project>
