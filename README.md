@@ -61,7 +61,7 @@ It is keep your account safe and will withdraw more money than it should.
 To test that it is working properly, running our app will transfer 5$ from Foo account to Bar and 5$ from Bar account to Foo.
 After completing it will print out the current balance of each account.
 
-1. In your terminal navigate to `App2`, execute `/.compile.sh` and `./run.sh`. Your app is now running.
+1. In your terminal navigate to `MoneyTransfer`, execute `/.compile.sh` and `./run.sh`. Your app is now running.
 2. This time, take a thread dump via `jstack <PID>`
 3. Investigate the results yourself or upload the results to https://fastthread.io
 4. You figured out what went wrong, awesome! Open the source code and try to fix the problem (while keeping our app "Always correct"!)
@@ -75,7 +75,7 @@ and figure out how many positive and negative reviews are there, using a super c
 
 To test that it is working properly, running our app will analyze only the first 3K reviews (out of ~200K reviews)
 
-1. In your terminal navigate to `App3b` execute `/.compile.sh` and `./run.sh`. 
+1. In your terminal navigate to `AirbnbReviews` execute `/.compile.sh` and `./run.sh`. 
 2. Again, go to VisualVM. Can you see what is wrong?
 3. Open the source code, understand the problem and mitigate it. 
 
