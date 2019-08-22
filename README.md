@@ -69,16 +69,20 @@ After completing it will print out the current balance of each account.
 Solution [is here](/App2/solution/Solution.md)
 
 ### "Airbnb Reviews Analyzer" App
-The third app is an app and can read CSV file that contains reviews on Airbnb properties, parse it
+The Airbnb Reviews Analyzer is an app that can read a CSV file that contains reviews on an Airbnb property, parse it
 and figure out how many positive and negative reviews are there, using a super complex algorithm! 
 
 1. In your terminal navigate to `App3b` execute `/.compile.sh` and `./run.sh`. 
-2. This time, your app has crashed.
-3. Open the source code, understand the problem and mitigate it. (solution is here ????)
+2. This time, your app has crashed. 
+3. Understand what happened from the stack trace
+4. Open the source code, understand the problem and mitigate it. 
 
-### "YouTube likes statistics" App
-The forth app is an app and can read CSV files that contains data on youtube videos such as: views, likes reviews dates and more 
-the app goes over the data and calculates the average likes for video per country.
+Solution [is here](/App3b/solution/Solution.md)
+
+### "YouTube Likes Calculator" App
+The YouTube Likes Calculator is an app that can read CSV files that contains data on youtube videos such as: views, likes reviews dates and more.
+ 
+The app goes over the data and calculates the average likes for video per country.
 
 1. In your terminal navigate to ??? a and run ???. Your app crashed.
 2. Run it with a JVM flag to automatically take a heap dump on OOM.
