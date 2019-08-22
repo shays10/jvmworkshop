@@ -1,36 +1,18 @@
 package com.wix
 
-import scala.io.Source
-import scala.util.Try
+import com.wix.servlet.YouTubeServlet
+import org.eclipse.jetty.server.Server
+import org.eclipse.jetty.servlet.ServletHandler
 
-/**
- * Hello world!
- *
- */
-object App  {
-
-  val LIKE_COL = 8
+object App {
 
   def main(args: Array[String]) {
-    executeSuperComplexStuff()
-    avgLikesForCountry("US")
-    avgLikesForCountry("FR")
-    avgLikesForCountry("GB")
-    executeSuperComplexStuff()
+    println("YouTube likes statistics app Starting....")
+    val server = new Server(8080)
+    val handler = new ServletHandler()
+    server.setHandler(handler)
+    handler.addServletWithMapping(classOf[YouTubeServlet], "/*")
+    server.start()
+    server.join()
   }
-
-  private def avgLikesForCountry(code: String): Unit = {
-    val source = Source.fromResource(s"${code}videos.csv")
-
-    val likesSeq = source.getLines().map { line ⇒
-      val cols = line.split(",").map(_.trim)
-      val maybeLikesStr = cols.lift(LIKE_COL)
-      maybeLikesStr.flatMap(l ⇒ Try(l.toLong).toOption).getOrElse(0l)
-    }.toSeq
-
-    val avg = likesSeq.foldLeft(0L)(_ + _) / likesSeq.size
-    println(s"The Average likes for a video in the $code is $avg")
-  }
-
-  def executeSuperComplexStuff(): Unit = Thread.sleep(10000)
 }

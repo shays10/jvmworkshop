@@ -1,1 +1,1 @@
-java -Xmx128M -jar target/App1-1.0-SNAPSHOT-jar-with-dependencies.jar
+java -jar target/App1-1.0-SNAPSHOT-jar-with-dependencies.jar

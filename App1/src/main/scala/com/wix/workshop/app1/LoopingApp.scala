@@ -15,5 +15,4 @@ object LoopingApp {
       cache.getContact(new ContactId(Random.nextInt(10)))
     }
   }
-
 }
