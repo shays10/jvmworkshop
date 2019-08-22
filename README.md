@@ -3,7 +3,8 @@
 
 ## Objectives & Toolbox
 
-In today's workshop we will simulate common use cases of JVM problems you might run into when you application misbehaves.
+In today's workshop we will simulate common use cases of JVM problems you might run into when your application misbehaves.
+
 We will learn how to troubleshoot and diagnose JVM issues in our application using a our toolbox below:
 
 `jps` - JVM Process Status Tool. Allows you to find the PID of your running JVMs.
@@ -25,7 +26,8 @@ All of them are already installed on your machine if you have JDK installed.
 Below you will find a list of sample apps. Simple, yet misbehaving apps. 
 
 ### "The Lightweight Contact Retriever"
-"The Lightweight Contact Retriever" application allows you to get any contact you'd like, and fast!
+
+The Lightweight Contact Retriever application allows you to get any contact you'd like, and fast!
 It introduces a revolutionary cache mechanism that will save you plenty of time and network latency.
 When a contact request arrives, if the contact is already in the cache we will extract it from there. Otherwise,
 we'll call our remote and slow DB, cache the contact and return it.
@@ -33,26 +35,26 @@ we'll call our remote and slow DB, cache the contact and return it.
 To test that it is working properly, let's fire up the server and see what happens
 
 1. In your terminal navigate to `App1`, execute `/.compile.sh` and `./run.sh`. Your jetty server should be up and running.
-2. In a separate terminal window, locate your PID via jps.
+2. In a separate terminal window, locate your PID via `jps`.
 3. Open VisualVM, locate your app and monitor it. 
-4. We created a shell script for you that will randomize numbers between 1 to 10 and send a `GET` request
-`curl http://localhost:8080?contactId=<contactNumber>`
+4. We created a shell script for you that will randomize numbers between 1 to 10 and send the following HTTP call:
+`curl http://localhost:8080?contactId=<contactNumber>` 
 In order to generate load, run `./create_load.sh`. It will create 10,000 of those requests.
 5. Back to VisualVM. What is happening? Can you tell?
 6. Shutdown the process. 
-7. Let's try to simulate faster what will happen overtime. Let's increase the rate of request
-(by simply looping infinitely) and decrease the heap size.
-Run `./fast_run.sh`
-8. To investigate further, let's take a heap dump. Take it via:
-  a. VisualVM
-  b. jmap. (By running `jmap -dump:live,file=<filename> <pid>`)
+7. Let's try to simulate faster what will happen overtime. Let's increase the rate of requests
+(by simply looping infinitely) while decreasing the heap size.
+Run `./fast_run.sh` - It will do that for you.
+8. To investigate further, let's take a heap dump. Take it via
+    * VisualVM
+    * jmap. (By running `jmap -dump:live,file=<filename> <pid>`)
 9. Investigate one of the heap dump. Find the offending class.
 10. Open the source code in your favorite IDE. Locate and try to fix the problem.
 
 Solution [is here](/App1/solution/Solution.md)
 
 ### "The Always Correct Money Transfer" App
-"The Always Correct Money Transfer" application allows you to safely and conveniently transfer money from one account to the other.
+The Always Correct Money Transfer application allows you to safely and conveniently transfer money from one account to the other.
 It is keep your account safe and will withdraw more money than it should.
 
 To test that it is working properly, running our app will transfer 5$ from Foo account to Bar and 5$ from Bar account to Foo.
