@@ -1,4 +1,4 @@
-# JVM Workshop
+# [Workshop] Troubleshooting the JVM 
 
 
 ## Objectives & Toolbox
@@ -11,6 +11,7 @@ We will learn how to troubleshoot and diagnose JVM issues in our application usi
 `jmap` - Memory Map. Allows you to take histograms and heapdumps.
 
 `jvisualvm`  - Allows you to monitor and troubleshoot apps on the JVM.
+
 All of them are already installed on your machine if you have JDK installed.
 
 ## Optional Installations
