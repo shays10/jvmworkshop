@@ -8,7 +8,7 @@ object App {
 
   def main(args: Array[String]) {
 
-    println("App1 Starting....")
+    println("ContactRetriever Starting....")
     val server = new Server(8080)
     val handler = new ServletHandler()
     server.setHandler(handler)

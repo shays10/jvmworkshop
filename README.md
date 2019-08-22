@@ -51,7 +51,7 @@ Run `./fast_run.sh` - It will do that for you.
 9. Investigate one of the heap dump. Find the offending class.
 10. Open the source code in your favorite IDE. Locate and try to fix the problem.
 
-Solution [is here](/App1/solution/Solution.md)
+Solution [is here](/ContactRetriever/solution/Solution.md)
 
 ### "The Always Correct Money Transfer" App
 The Always Correct Money Transfer application allows you to safely and conveniently transfer money from one account to the other.
@@ -82,6 +82,17 @@ Solution [is here](/App3b/solution/Solution.md)
 
 ### "YouTube Likes Calculator" App
 The YouTube Likes Calculator is an app that can read CSV files that contains data on youtube videos such as: views, likes reviews dates and more.
+ 
+The app goes over the data and calculates the average likes for video per country.
+
+1. In your terminal navigate to ??? a and run ???. Your app crashed.
+2. Run it with a JVM flag to automatically take a heap dump on OOM.
+3. Investigate the heap dump. 
+4. Run the app again, this time with -Xmx???
+5. Monitor it. Do you think there is a leak? (Solution is here ???)
+
+### "Thread Super-UUID Generator" App
+The Thread Super-UUID Generator is an app that can that all 
  
 The app goes over the data and calculates the average likes for video per country.
 

@@ -5,7 +5,7 @@
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
   <modules>
-    <module>App1</module>
+    <module>ContactRetriever</module>
     <module>App2</module>
     <module>App3b</module>
     <module>App4a</module>

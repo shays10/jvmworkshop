@@ -1,1 +1,0 @@
-java -Xmx10M -cp target/App1-1.0-SNAPSHOT-jar-with-dependencies.jar com.wix.workshop.app1.LoopingApp
