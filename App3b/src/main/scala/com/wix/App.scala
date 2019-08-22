@@ -23,7 +23,7 @@ object App  {
 
   private def parseReviews(): Unit = {
     val source = Source.fromResource("reviews.csv")
-    val analyzedReviews: Set[Future[Unit]] = source.getLines().take(20000).map { analyzeLine }.toSet
+    val analyzedReviews: Set[Future[Unit]] = source.getLines().take(3000).map { analyzeLine }.toSet
     Future.sequence(analyzedReviews).onComplete( {
       case Success(_) =>
         println(s"Positive Reviews: ${positiveReviews.get()}")
