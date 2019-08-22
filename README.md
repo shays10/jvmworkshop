@@ -79,7 +79,7 @@ To test that it is working properly, running our app will analyze only the first
 2. Again, go to VisualVM. Can you see what is wrong?
 3. Open the source code, understand the problem and mitigate it. 
 
-Solution [is here](/App3b/solution/Solution.md)
+Solution [is here](/AirbnbReviews/solution/Solution.md)
 
 ### "YouTube Likes Calculator" App
 The YouTube Likes Calculator is an app that can read CSV files that contains data on youtube videos such as: views, likes reviews dates and more.

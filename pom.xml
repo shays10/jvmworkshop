@@ -7,7 +7,7 @@
   <modules>
     <module>ContactRetriever</module>
     <module>MoneyTransfer</module>
-    <module>App3b</module>
+    <module>AirbnbReviews</module>
     <module>App4a</module>
     <module>App5</module>
   </modules>
