@@ -34,7 +34,7 @@ we'll call our remote and slow DB, cache the contact and return it.
 
 To test that it is working properly, let's fire up the server and see what happens
 
-1. In your terminal navigate to `App1`, execute `/.compile.sh` and `./run.sh`. Your jetty server should be up and running.
+1. In your terminal navigate to `ContactRetriever`, execute `/.compile.sh` and `./run.sh`. Your jetty server should be up and running.
 2. In a separate terminal window, locate your PID via `jps`.
 3. Open VisualVM, locate your app and monitor it. 
 4. We created a shell script for you that will randomize numbers between 1 to 10 and send the following HTTP call:
@@ -49,7 +49,8 @@ Run `./fast_run.sh` - It will do that for you.
     * VisualVM
     * jmap. (By running `jmap -dump:live,file=<filename> <pid>`)
 9. Investigate one of the heap dump. Find the offending class.
-10. Open the source code in your favorite IDE. Locate and try to fix the problem.
+10. Open the source code in your favorite IDE. (load the `pom.xml` in `/jvmworkshop`). Locate and try to fix the problem.
+
 
 Solution [is here](/ContactRetriever/solution/Solution.md)
 
@@ -66,7 +67,7 @@ After completing it will print out the current balance of each account.
 4. You figured out what went wrong, awesome! Open the source code and try to fix the problem (while keeping our app "Always correct"!)
 5. Rerun the app and make sure it completes successfully.
 
-Solution [is here](/App2/solution/Solution.md)
+Solution [is here](/MoneyTransfer/solution/Solution.md)
 
 ### "Airbnb Reviews Analyzer" App
 The Airbnb Reviews Analyzer is an app that can read a CSV file that contains reviews on an Airbnb property, parse it
