@@ -12,11 +12,11 @@ object App  {
   val LIKE_COL = 8
 
   def main(args: Array[String]) {
-    Thread.sleep(10000)
+    executeSuperComplexStuff()
     avgLikesForCountry("US")
     avgLikesForCountry("FR")
     avgLikesForCountry("GB")
-    Thread.sleep(10000)
+    executeSuperComplexStuff()
   }
 
   private def avgLikesForCountry(code: String): Unit = {
@@ -32,4 +32,5 @@ object App  {
     println(s"The Average likes for a video in the $code is $avg")
   }
 
+  def executeSuperComplexStuff(): Unit = Thread.sleep(10000)
 }

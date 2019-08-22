@@ -15,7 +15,7 @@ object App  {
   val negativeKeywords: Set[String] = Set("terrible", "disgusting", "horrific", "bad", "scam", "fraud")
   val REVIEW_COLUMN = 6
 
-  implicit val ec = ExecutionContext.fromExecutorService(Executors.newCachedThreadPool())
+  implicit val ec = ExecutionContext.fromExecutorService(Executors.newFixedThreadPool(100000))
 
   def main(args: Array[String]) {
     parseReviews()

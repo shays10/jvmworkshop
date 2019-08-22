@@ -69,8 +69,11 @@ and figure out how many positive and negative reviews are there, using a super c
 2. This time, your app has crashed.
 3. Open the source code, understand the problem and mitigate it. (solution is here ????)
 
-App #4
-------
+"YouTube likes statistics" App
+-----------------------
+The forth app is an app and can read CSV files that contains data on youtube videos such as: views, likes reviews dates and more 
+the app goes over the data and calculates the average likes for video per country.
+
 1. In your terminal navigate to ??? a and run ???. Your app crashed.
 2. Run it with a JVM flag to automatically take a heap dump on OOM.
 3. Investigate the heap dump. 
