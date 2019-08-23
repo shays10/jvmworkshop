@@ -32,6 +32,7 @@ Below you will find a list of sample apps. Simple, yet misbehaving apps.
 
 The Lightweight Contact Retriever application allows you to get any contact you'd like, and fast!
 It introduces a revolutionary cache mechanism that will save you plenty of time and network latency.
+
 When a contact request arrives, if the contact is already in the cache we will extract it from there. Otherwise,
 we'll call our remote and slow DB, cache the contact and return it.
 
@@ -110,6 +111,8 @@ To test that it is working properly, Let's run the app and fire requests.
 4. Let's also investigate via VisualVM. This time, take a heap time, open it and navigate to "OQL Console"
 5. Create a query to find out if there are long-lasting instances of the class that is holding our UUID (`com.wix.app5.model.SuperUuidWrapper`)
 6. Open the source code, understand the problem and mitigate it. 
+
+Solution [is here](/SuperUuidGenerator/solution/Solution.md)
 
 ## Reading Materials
 
