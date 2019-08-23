@@ -9,6 +9,6 @@
     <module>MoneyTransfer</module>
     <module>AirbnbReviews</module>
     <module>LikesCalculator</module>
-    <module>App5</module>
+    <module>SuperUuidGenerator</module>
   </modules>
 </project>

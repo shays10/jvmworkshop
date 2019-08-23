@@ -1,5 +1,4 @@
-"The Always Correct Money Transfer App" - Solution
----------------------------------------------------
+# "The Always Correct Money Transfer App" - Solution
 
 As you already figured out, our app isn't properly as it never completes.
 In order to protect our accounts and make our `transfer` method atomic by making sure no other thread is modifying either account concurrently, 

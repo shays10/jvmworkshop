@@ -11,6 +11,8 @@ We will learn how to troubleshoot and diagnose JVM issues in our application usi
 
 `jmap` - Memory Map. Allows you to take histograms and heapdumps.
 
+`jstack` - Allows us to print the stack traces of all threads that are attached to our JVM (e.g. Thread dump)
+
 `jvisualvm`  - Allows you to monitor and troubleshoot apps on the JVM.
 
 All of them are already installed on your machine if you have JDK installed.
@@ -94,18 +96,19 @@ The app goes over the data and calculates the average likes for video per countr
 
 Solution [is here](/LikesCalculator/solution/Solution.md)
 
-### "Thread Super-UUID Generator" App
-The Thread Super-UUID Generator is an app that can that all 
+### "SuperUUID Tokens Generator" App
+The SuperUUID Tokens Generator App generates a REALLY long String that will represent the context id for
+the scope of every request that will be made to the server. 
+Obviously, each request should have its own unique ID.
+
+To test that it is working properly, Let's run the app and fire requests.
  
-The app goes over the data and calculates the average likes for video per country.
-
-1. In your terminal navigate to ??? a and run ???. Your app crashed.
-2. Run it with a JVM flag to automatically take a heap dump on OOM.
-3. Investigate the heap dump. 
-4. Run the app again, this time with -Xmx???
-5. Monitor it. Do you think there is a leak? (Solution is here ???)
-
-
+1. In your terminal navigate to `SuperUuidGenerator` and execute `/.compile.sh` and `./run.sh`. Your Server is now running
+2. Run the `./create_load.sh` script. It will fire 100 requests while printing out their ID.
+3. What is wrong here?
+4. Let's also investigate via VisualVM. This time, take a heap time, open it and navigate to "OQL Console"
+5. Create a query to find out if there are long-lasting instances of the class that is holding our UUID (`com.wix.app5.model.SuperUuidWrapper`)
+6. Open the source code, understand the problem and mitigate it. 
 
 ## Reading Materials
 
