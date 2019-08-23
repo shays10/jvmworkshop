@@ -20,6 +20,7 @@ All of them are already installed on your machine if you have JDK installed.
 ## Optional Installations
 
 `Visual VM GC Plugin` - Install it via: Visual VM -> Tools -> Plugins
+
 `MAT - Eclipse Memory Analyzer` - A feature-rich Java heap analyzer that allows you to analyze larger heap dumps easily (https://www.eclipse.org/mat/downloads.php)
 
 
