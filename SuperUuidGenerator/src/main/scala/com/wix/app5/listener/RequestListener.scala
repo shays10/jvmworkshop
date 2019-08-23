@@ -15,7 +15,6 @@ class RequestListener extends ServletRequestListener {
   }
 
   override def requestDestroyed(servletRequestEvent: ServletRequestEvent): Unit = {
-    superUuidThreadLocal.remove()
   }
 }
 
