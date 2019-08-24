@@ -41,19 +41,24 @@ To test that it is working properly, let's fire up the server and see what happe
 1. In your terminal navigate to `ContactRetriever`, execute `/.compile.sh` and `./run.sh`. Your jetty server should be up and running.
 2. In a separate terminal window, locate your PID via `jps`.
 3. Open VisualVM, locate your app and monitor it. 
-4. We created a shell script for you that will randomize numbers between 1 to 10 and send the following HTTP call:
+4. We created a shell script for you that will randomize contactIds from 1 to 10 and send the following HTTP call:
 `curl http://localhost:8080?contactId=<contactNumber>` 
 In order to generate load, run `./create_load.sh`. It will create 10,000 of those requests.
-5. Back to VisualVM. What is happening? Can you tell?
-6. Shutdown the process. 
-7. Let's try to simulate faster what will happen overtime. Let's increase the rate of requests
-(by simply looping infinitely) while decreasing the heap size.
-Run `./fast_run.sh` - It will do that for you.
-8. To investigate further, let's take a heap dump. Take it via
+5. Back to VisualVM. What is happening? 
+To investigate further, let's take a heap dump after a while. Take it via
     * VisualVM
     * jmap. (By running `jmap -dump:live,file=<filename> <pid>`)
-9. Investigate one of the heap dump. Find the offending class.
-10. Open the source code in your favorite IDE. (load the `pom.xml` in `/jvmworkshop`). Locate and try to fix the problem.
+Let's open the heap dump and look at the `Classes` tab. What is wrong here?
+6. Let's try to gather the "Surviving Generations" metric.
+    a. Make sure the app is still running and creating contacts
+    b. Go to `Profiling` tab, configure your setting as follows:
+   ![Memory profiling](memoryprofiling.png)
+    c. Click on `Memory` to start profiling. Watch the `generations` metric. What are we seeing?
+7. Shutdown the process. 
+8. Let's try to simulate faster what will happen overtime. Let's increase the rate of requests
+(by simply looping infinitely) while decreasing the heap size.
+Run `./fast_run.sh` - It will do that for you. Let it run for a minute or two. In the meanwhile..
+9. Open the source code in your favorite IDE. (load the `pom.xml` in `/jvmworkshop`). Locate and try to fix the problem.
 
 
 Solution [is here](/ContactRetriever/solution/Solution.md)

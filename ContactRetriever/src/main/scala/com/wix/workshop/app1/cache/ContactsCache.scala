@@ -2,18 +2,18 @@ package com.wix.workshop.app1.cache
 
 import com.wix.workshop.app1.model.{Contact, ContactId}
 
-import scala.collection.immutable.HashMap
+import scala.collection.mutable
 
 class ContactsCache {
 
-  var contacts: Map[ContactId, Contact] = HashMap.empty
+  val contacts: mutable.Map[ContactId, Contact] = mutable.HashMap.empty
 
   def getContact(contactId: ContactId): Contact = {
     contacts.get(contactId) match {
       case Some(contact) => contact
       case None =>
         val contact = getContactFromDB(contactId)
-        contacts += contactId -> contact
+        contacts.put(contactId, contact)
         contact
     }
   }
