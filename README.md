@@ -112,12 +112,12 @@ Solution [is here](/LikesCalculator/solution/Solution.md)
 ### "SuperUUID Tokens Generator" App
 The SuperUUID Tokens Generator App generates a REALLY long String that will represent the context id for
 the scope of every request that will be made to the server. 
-Obviously, each request should have its own unique ID.
+Obviously, the main requirement is that each request must have its own unique ID.
 
 To test that it is working properly, Let's run the app and fire requests.
  
 1. In your terminal navigate to `SuperUuidGenerator` and execute `/.compile.sh` and `./run.sh`. Your Server is now running
-2. Run the `./create_load.sh` script. It will fire 100 requests while printing out their ID.
+2. Run the `./create_load.sh` script. It will fire 100 requests while printing out their IDs.
 3. What is wrong here?
 4. Let's also investigate via VisualVM. This time, take a heap time, open it and navigate to "OQL Console"
 5. Create a query to find out if there are long-lasting instances of the class that is holding our UUID (`com.wix.app5.model.SuperUuidWrapper`)
