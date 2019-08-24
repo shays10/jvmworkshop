@@ -47,18 +47,19 @@ In order to generate load, run `./create_load.sh`. It will create 10K requests.
 5. Back to VisualVM. What is happening? 
 To investigate further, let's take a heap dump after a while. Take it via
     * VisualVM
-    * jmap. (By running `jmap -dump:live,file=<filename> <pid>`)
+    * jmap. (By running `jmap -dump:live,file=<filename> <pid>`)  
+   
 Let's open the heap dump and look at the `Classes` tab. What is wrong here?
-6. Let's try to gather the "Surviving Generations" metric.  
+6. Let's try to gather the "[Surviving Generations](https://blogs.oracle.com/nbprofiler/what-do-the-surviving-generations-metrics-mean)" metric.  
     1. Make sure the app is still running and creating contacts
-    2. Go to `Profiling` tab, configure your setting as follows:
+    2. Go to `Profiler` tab and configure your setting as follows:
    ![Memory profiling](memoryprofiling.png)
     3. Click on `Memory` to start profiling. Watch the `generations` metric. What are we seeing?
 7. Shutdown the process. 
 8. Let's try to simulate faster what will happen overtime. Let's increase the rate of requests
 (by simply looping infinitely) while decreasing the heap size.
-Run `./fast_run.sh` - It will do that for you. Let it run for a minute or two. In the meanwhile..
-9. Open the source code in your favorite IDE. (load the `pom.xml` in `/jvmworkshop`). Locate and try to fix the problem.
+Run `./fast_run.sh` - It will do that for you. Let it run for a minute or two. What is happening?
+In the meanwhile, open the source code in your favorite IDE. (load the `pom.xml` in `/jvmworkshop`). Locate and try to fix the problem.
 
 
 Solution [is here](/ContactRetriever/solution/Solution.md)
