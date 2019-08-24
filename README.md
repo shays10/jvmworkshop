@@ -43,13 +43,13 @@ To test that it is working properly, let's fire up the server and see what happe
 3. Open VisualVM, locate your app and monitor it. 
 4. We created a shell script for you that will randomize contactIds from 1 to 10 and send the following HTTP call:
 `curl http://localhost:8080?contactId=<contactNumber>` 
-In order to generate load, run `./create_load.sh`. It will create 10,000 of those requests.
+In order to generate load, run `./create_load.sh`. It will create 10K requests.
 5. Back to VisualVM. What is happening? 
 To investigate further, let's take a heap dump after a while. Take it via
     * VisualVM
     * jmap. (By running `jmap -dump:live,file=<filename> <pid>`)
 Let's open the heap dump and look at the `Classes` tab. What is wrong here?
-6. Let's try to gather the "Surviving Generations" metric.
+6. Let's try to gather the "Surviving Generations" metric.  
     a. Make sure the app is still running and creating contacts
     b. Go to `Profiling` tab, configure your setting as follows:
    ![Memory profiling](memoryprofiling.png)
