@@ -49,11 +49,11 @@ To test that it is working properly, let's fire up the server and see what happe
 In order to generate load, run `./create_load.sh`. It will create 10K requests.
 
 5. Back to VisualVM. What is happening? 
-To investigate further, let's take a heap dump after a while. Take it via
+To investigate further, let's take a heap dump after a while. Take it via:
     * VisualVM
     * jmap. (By running `jmap -dump:live,file=<filename> <pid>`)  
 Let's open the heap dump and look at the `Classes` tab. What is wrong here?  
-6. Let's try to gather the "[Surviving Generations](https://blogs.oracle.com/nbprofiler/what-do-the-surviving-generations-metrics-mean)" metric.  
+6. Let's try to gather the "[Surviving Generations](https://blogs.oracle.com/nbprofiler/what-do-the-surviving-generations-metrics-mean)" metric: 
     1. Make sure the app is still running and creating contacts
     2. Go to `Profiler` tab and configure your setting as follows:
    ![Memory profiling](memoryprofiling.png)
