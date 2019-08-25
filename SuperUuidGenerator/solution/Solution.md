@@ -1,6 +1,6 @@
 # "SuperUUID Tokens Generator" App - Solution
 
-As you already figured out, our app isn't properly and prints out duplicates token for different requests.
+As you already figured out, our app isn't working properly and prints out duplicates token for different requests.
 After taking a heap dump, go to `OQL Console` and run the query
 
 ```select x from com.wix.app5.model.SuperUuidWrapper x```
