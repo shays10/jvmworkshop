@@ -3,7 +3,7 @@
 
 You probably noticed that our app is misbehaving, using A LOT of memory over time and when we take a heap dump
  our `Contact` class has a lot of instances. 
- Moreever, it's "Surviving Generation" metrics keeps on growing and growing, a strong indication of a memory leak.
+ More over, it's "Surviving Generation" metrics keeps on growing and growing, a strong indication of a memory leak.
  
 The root cause is that our `ContactId` class implemented `hashcode` without `equals`.
 Failing to do so causes our Cache (that is based on a `HashMap`) to misbehave and basically act like a `List`.
