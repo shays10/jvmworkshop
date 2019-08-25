@@ -28,7 +28,7 @@ All of them are already installed on your machine if you have JDK installed.
 
 Below you will find a list of sample apps. Simple, yet misbehaving apps. 
 
-### "The Lightweight Contact Retriever"
+### First App: "The Lightweight Contact Retriever"
 
 The Lightweight Contact Retriever application allows you to get any contact you'd like, and fast!
 It introduces a revolutionary cache mechanism that will save you plenty of time and network latency.
@@ -68,7 +68,7 @@ In the meanwhile, open the source code in your favorite IDE. (load the `pom.xml`
 
 Solution [is here](/ContactRetriever/solution/Solution.md)
 
-### "The Always Correct Money Transfer" App
+### Second App: "The Always Correct Money Transfer" 
 The Always Correct Money Transfer application allows you to safely and conveniently transfer money from one account to the other.
 It is keep your account safe and will withdraw more money than it should.
 
@@ -83,7 +83,7 @@ After completing it will print out the current balance of each account.
 
 Solution [is here](/MoneyTransfer/solution/Solution.md)
 
-### "Airbnb Reviews Analyzer" App
+### Third App: "Airbnb Reviews Analyzer"
 The Airbnb Reviews Analyzer is an app that can read a CSV file that contains reviews on an Airbnb property, parse it
 and figure out how many positive and negative reviews are there, using a super complex algorithm! 
 
@@ -95,7 +95,7 @@ To test that it is working properly, running our app will analyze only the first
 
 Solution [is here](/AirbnbReviews/solution/Solution.md)
 
-### "YouTube Likes Calculator" App
+### Fourth App: "YouTube Likes Calculator"
 The YouTube Likes Calculator is an app that can read CSV files that contains data on YouTube videos such as: views, likes review dates and more.
  
 The app goes over the data and calculates the average likes for video per country.
@@ -108,7 +108,7 @@ The app goes over the data and calculates the average likes for video per countr
 
 Solution [is here](/LikesCalculator/solution/Solution.md)
 
-### "SuperUUID Tokens Generator" App
+### Fifth App: "SuperUUID Tokens Generator"
 The SuperUUID Tokens Generator App generates a REALLY long String that will represent the context id for
 the scope of every request that will be made to the server. 
 Obviously, the main requirement is that each request must have its own unique ID.
