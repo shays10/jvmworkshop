@@ -17,13 +17,6 @@ We will learn how to troubleshoot and diagnose JVM issues in our application usi
 
 All of them are already installed on your machine if you have JDK installed.
 
-### Optional Installations
-
-`Visual VM GC Plugin` - Install it via: Visual VM -> Tools -> Plugins
-
-`MAT - Eclipse Memory Analyzer` - A feature-rich Java heap analyzer that allows you to analyze larger heap dumps easily (https://www.eclipse.org/mat/downloads.php)
-
-
 ## Let's Start!
 
 Below you will find a list of sample apps. Simple, yet misbehaving apps. 
