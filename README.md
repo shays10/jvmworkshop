@@ -85,8 +85,9 @@ and figure out how many positive and negative reviews are there, using a super c
 To test that it is working properly, running our app will analyze only the first 3K reviews (out of ~200K reviews)
 
 1. In your terminal navigate to `AirbnbReviews` execute `./compile.sh` and `./run.sh`. 
-2. Again, go to VisualVM. Can you see what is wrong?
+2. Again, go to the `Monitor` tab in `JVisualVM`. What is wrong? There's one metric that is abnormal.
 3. Open the source code, understand the problem and mitigate it. 
+4. Rerun the app to make sure that the issue is solved.
 
 Solution [is here](/AirbnbReviews/solution/Solution.md)
 
@@ -116,6 +117,7 @@ To test that it is working properly, Let's run the app and fire requests.
 4. Let's also investigate via JVisualVM. This time, take a heap dump, open it and navigate to "OQL Console"
 5. Create a query to find out if there are instances that were not GCed of the class that is holding our UUID (`com.wix.app5.model.SuperUuidWrapper`)
 6. Open the source code, understand the problem and mitigate it. 
+7. Rerun the app to make sure that the issue is solved.
 
 Solution [is here](/SuperUuidGenerator/solution/Solution.md)
 
