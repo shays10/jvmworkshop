@@ -38,7 +38,7 @@ we'll call our remote and slow DB, cache the contact and return it.
 
 To test that it is working properly, let's fire up the server and see what happens
 
-1. In your terminal navigate to `ContactRetriever`, execute `/.compile.sh` and `./run.sh`. Your jetty server should be up and running.
+1. In your terminal navigate to `ContactRetriever`, execute `./compile.sh` and `./run.sh`. Your jetty server should be up and running.
 
 2. In a separate terminal window, locate your PID via `jps`.
 
@@ -76,7 +76,7 @@ It is keep your account safe and will withdraw more money than it should.
 To test that it is working properly, running our app will transfer 5$ from Foo account to Bar and 5$ from Bar account to Foo.
 After completing it will print out the current balance of each account.
 
-1. In your terminal navigate to `MoneyTransfer`, execute `/.compile.sh` and `./run.sh`. Your app is now running.
+1. In your terminal navigate to `MoneyTransfer`, execute `./compile.sh` and `./run.sh`. Your app is now running.
 2. This time, take a thread dump via `jstack <PID>`
 3. Investigate the results yourself or upload the results to https://fastthread.io
 4. You figured out what went wrong, awesome! Open the source code and try to fix the problem (while keeping our app "Always correct"!)
@@ -90,7 +90,7 @@ and figure out how many positive and negative reviews are there, using a super c
 
 To test that it is working properly, running our app will analyze only the first 3K reviews (out of ~200K reviews)
 
-1. In your terminal navigate to `AirbnbReviews` execute `/.compile.sh` and `./run.sh`. 
+1. In your terminal navigate to `AirbnbReviews` execute `./compile.sh` and `./run.sh`. 
 2. Again, go to VisualVM. Can you see what is wrong?
 3. Open the source code, understand the problem and mitigate it. 
 
@@ -101,7 +101,7 @@ The YouTube Likes Calculator is an app that can read CSV files that contains dat
  
 The app goes over the data and calculates the average likes for video per country.
 
-1. In your terminal navigate to `LikesCalculator` execute `/.compile.sh` and `./run.sh`.  Your Jetty server should be up and running.
+1. In your terminal navigate to `LikesCalculator` execute `./compile.sh` and `./run.sh`.  Your Jetty server should be up and running.
 2. Run `curl localhost:8080/` to fire up a single request. You app has crashed!
 3. Now let's run the app with more memory. `java -Xmx512M -jar target/LikesCalculator-1.0-SNAPSHOT-jar-with-dependencies.jar`
 4. In a separate terminal window run `./create_load.sh`. This will fire 10K requests. 
