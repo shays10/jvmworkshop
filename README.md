@@ -42,8 +42,8 @@ To test that it is working properly, let's fire up the server and see what happe
 
 4. run `./create_load.sh`, It will create 10K requests. Each request will try to retrieve one of the first 10 contacts.
 
-5. Back to JVisualVM. What is happening? 
-To investigate further, let's take a heap dump once you see the chainsaw graph in the heap section. Try one of the following methods:
+5. Back to JVisualVM. You should see the Heap graph going wild.
+To investigate further, let's take a heap dump. Try one of the following methods:
     * JVisualVM: `Monitor` tab -> `Heap dump` (right upper corner)
     * jmap. (By running `jmap -dump:live,file=<filename> <pid>`)  
 Let's open the heap dump and look at the `Classes` tab. What is wrong here?  
