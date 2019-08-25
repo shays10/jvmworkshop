@@ -70,7 +70,7 @@ Solution [is here](/ContactRetriever/solution/Solution.md)
 
 ### Second App: "The Always Correct Money Transfer" 
 The Always Correct Money Transfer application allows you to safely and conveniently transfer money from one account to the other.
-It is keep your account safe and will withdraw more money than it should.
+It keeps your account safe and only withdraw the amount it should.
 
 To test that it is working properly, running our app will transfer 5$ from Foo account to Bar and 5$ from Bar account to Foo.
 After completing it will print out the current balance of each account.
