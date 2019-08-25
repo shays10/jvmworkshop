@@ -1,14 +1,10 @@
-"YouTube likes statistics" - Solution
+"YouTube Likes Statistics" - Solution
 -----------------------------------------------
 
-Did the app crushed? what is the problem?
-go to JVisualVm -> check the heap usage, we can see that the heap is full, is it due to a leak?
- or the business logic of the app.
- 
-the app loads a data set file of youtube statistics and analyze it.
-in this case some optimizations can be done:
-1. increase the xmx parameter using  `java -Xmx512M -jar target/LikesCalculator-1.0-SNAPSHOT-jar-with-dependencies.jar` 
-or from `Edit configuration -> Vm options -> -Xmx512M ` 
-1. change the what the app work by reading chunks of the file...
+Did the app crash? 
+We can see that the app is still working properly for a fairly high load.
+Using JVisualVm ->  we can see that the heap usage is quite large, is it due to a leak? or just a case where our app is using a lot of memory?
 
+We can see that the Surviving Generation metric does not indicate on a leak, it's just that our app is over-consuming memory in the parsing process and then releasing it. 
 
+We can increase the heap size or just analyze the file more efficiently instead of loading the entire data set at once.
