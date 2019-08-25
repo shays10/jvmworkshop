@@ -47,9 +47,9 @@ To test that it is working properly, let's fire up the server and see what happe
 4. run `./create_load.sh`, It will create 10K requests. each request randomize contactIds from 1 to 10 and send the following HTTP call:
 `curl http://localhost:8080?contactId=<contactNumber>` 
 
-5. Back to VisualVM. What is happening? 
-To investigate further, let's take a heap dump after a while. Take it via:
-    * VisualVM
+5. Back to JVisualVM. What is happening? 
+To investigate further, let's take a heap dump once you see the chainsaw graph in the heap section. Try one of the following methods:
+    * JVisualVM: `Monitor` tab -> `Heap dump` (right upper corner)
     * jmap. (By running `jmap -dump:live,file=<filename> <pid>`)  
 Let's open the heap dump and look at the `Classes` tab. What is wrong here?  
 6. Let's try to gather the "[Surviving Generations](https://blogs.oracle.com/nbprofiler/what-do-the-surviving-generations-metrics-mean)" metric: 
