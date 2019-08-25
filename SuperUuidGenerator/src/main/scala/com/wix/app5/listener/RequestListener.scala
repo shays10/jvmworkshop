@@ -20,6 +20,6 @@ class RequestListener extends ServletRequestListener {
 
 object RequestListener {
   val superUuidThreadLocal: ThreadLocal[SuperUuidWrapper] = ThreadLocal.withInitial[SuperUuidWrapper](() =>
-    SuperUuidWrapper(Random.alphanumeric.take(100).mkString))
+    SuperUuidWrapper(Random.alphanumeric.take(100).mkString))  //Solve me while still using the Thread local
 
 }
