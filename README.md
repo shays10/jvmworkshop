@@ -17,6 +17,9 @@ We will learn how to troubleshoot and diagnose JVM issues in our application usi
 
 All of them are already installed on your machine if you have JDK installed.
 
+## Before we start
+Connect to VPN
+
 ## Let's Start!
 
 Below you will find a list of sample apps. Simple, yet misbehaving apps. 
