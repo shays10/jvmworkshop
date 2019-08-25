@@ -44,7 +44,7 @@ To test that it is working properly, let's fire up the server and see what happe
 
 3. Open `jvisualvm` (From terminal), locate your app and monitor it. 
 
-4.run `./create_load.sh`, It will create 10K requests. each request randomize contactIds from 1 to 10 and send the following HTTP call:
+4. run `./create_load.sh`, It will create 10K requests. each request randomize contactIds from 1 to 10 and send the following HTTP call:
 `curl http://localhost:8080?contactId=<contactNumber>` 
 
 5. Back to VisualVM. What is happening? 
