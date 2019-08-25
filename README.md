@@ -42,7 +42,7 @@ To test that it is working properly, let's fire up the server and see what happe
 
 2. In a separate terminal window, locate your PID via `jps`.
 
-3. Open VisualVM, locate your app and monitor it. 
+3. Open `jvisualvm` (From terminal), locate your app and monitor it. 
 
 4. We created a shell script for you that will randomize contactIds from 1 to 10 and send the following HTTP call:
 `curl http://localhost:8080?contactId=<contactNumber>` 
