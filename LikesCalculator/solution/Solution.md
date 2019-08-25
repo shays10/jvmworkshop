@@ -1,7 +1,5 @@
-"YouTube Likes Statistics" - Solution
------------------------------------------------
+### "YouTube Likes Statistics" - Solution
 
-Did the app crash? 
 We can see that the app is still working properly for a fairly high load.
 Using JVisualVm ->  we can see that the heap usage is quite large, is it due to a leak? or just a case where our app is using a lot of memory?
 
