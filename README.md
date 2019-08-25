@@ -101,11 +101,9 @@ The YouTube Likes Calculator is an app that can read CSV files that contains dat
  
 The app goes over the data and calculates the average likes for video per country.
 
-1. In your terminal navigate to ??? a and run ???. Your app crashed.
-2. Run it with a JVM flag to automatically take a heap dump on OOM.
-3. Investigate the heap dump. 
-4. Run the app again, this time with -Xmx???
-5. Monitor it. Do you think there is a leak? (Solution is here ???)
+1. In your terminal navigate to LikesCalculator execute `/.compile.sh` and `./run.sh`.  Your jetty server should be up and running.
+2. In a separate terminal window run `./create_load.sh`
+5. Monitor it. Do you think there is a leak?
 
 Solution [is here](/LikesCalculator/solution/Solution.md)
 
