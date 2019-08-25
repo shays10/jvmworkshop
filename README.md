@@ -54,7 +54,7 @@ Let's open the heap dump and look at the `Classes` tab. What is wrong here?
 
 7. Kill the app. 
 
-8. Let's try to simulate faster what will happen overtime. Let's increase the rate of requests
+8. Let's try to simulate faster what will happen over time. Let's increase the rate of requests
 (by simply looping infinitely) while decreasing the heap size.
 Run `./fast_run.sh` - It will do that for you. Let it run until it crashes.
 
