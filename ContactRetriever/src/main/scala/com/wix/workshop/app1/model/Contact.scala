@@ -6,4 +6,4 @@ class ContactId(val id: Long) {
   def getId: Long = id
 }
 
-case class Contact(id: Long, firstName: String, lastName: String, address: String, city: String, zipCode: String)
+case class Contact(id: Long, firstName: String, lastName: String, address: String, city: String, zipCode: String, arr: Array[String])

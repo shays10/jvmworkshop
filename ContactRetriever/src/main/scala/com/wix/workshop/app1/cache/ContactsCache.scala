@@ -2,23 +2,26 @@ package com.wix.workshop.app1.cache
 
 import com.wix.workshop.app1.model.{Contact, ContactId}
 
-import scala.collection.mutable
+import scala.collection.immutable.HashMap
 
 class ContactsCache {
 
-  val contacts: mutable.Map[ContactId, Contact] = mutable.HashMap.empty
+  var contacts: Map[ContactId, Contact] = HashMap.empty
 
-  def getContact(contactId: ContactId): Contact = {
+  def getContact(id: Long): Contact = {
+    val contactId = new ContactId(id)
     contacts.get(contactId) match {
       case Some(contact) => contact
       case None =>
         val contact = getContactFromDB(contactId)
-        contacts.put(contactId, contact)
+        contacts = contacts + (contactId -> contact)
         contact
     }
   }
 
+  //This emulates a remote call to DB
   def getContactFromDB(contactId: ContactId): Contact = {
-    Contact(contactId.getId, "firstName", "lastName", "address", "city", "zipCode") //This emulates a remote call to DB
+    // The 'arr' parameter is here to make the Contact object larger. It's not the root cause.
+    Contact(contactId.getId, "firstName", "lastName", "address", "city", "zipCode", arr = new Array[String](1024 * 10))
   }
 }
