@@ -32,7 +32,6 @@ class YouTubeServlet extends HttpServlet {
                              res: Seq[(String, Long)]): Unit = {
     resp.setContentType("text/plain")
     val writer = new OutputStreamWriter(resp.getOutputStream)
-    writer.write("Contact is: ")
     writer.write("\n")
     res.foreach(r ⇒ writer.write(s"The Average likes for a video in the ${r._1} is ${r._2}\n"))
     writer.close()
