@@ -10,7 +10,7 @@ More over, it's "Surviving Generation" metrics keeps on growing and growing, a s
  
 The root cause is that our `ContactId` class implemented `hashcode` without `equals`.
 Failing to do so causes our Cache (that is based on a `HashMap`) to misbehave and basically act like a `List`.
-It fails to correctly `.get` on our map, so we end up storing all of our Contacts in the map infinitely.
+It fails to correctly `.get` on our map, so we end up storing all of our Contacts in the map until we crash with an `OutOfMemoryException`.
 
 Changing our `ContactId` class to a case class will solve the issue .
 In a `case class`, `equals` and `hashcode` are be overridden for us, by default.
