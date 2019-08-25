@@ -17,7 +17,7 @@ We will learn how to troubleshoot and diagnose JVM issues in our application usi
 
 All of them are already installed on your machine if you have JDK installed.
 
-## Optional Installations
+### Optional Installations
 
 `Visual VM GC Plugin` - Install it via: Visual VM -> Tools -> Plugins
 
