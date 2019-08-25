@@ -2,8 +2,10 @@
 -----------------------------------------------
 
 You probably noticed that our app is misbehaving.
-Even though we just requested 10 unique contacts, our app used A LOT of memory over time and when we take a heap dump
- our `Contact` class has a lot of instances. (Precisely 10K instances after 10K requests) 
+
+Even though we just requested 10 unique contacts, our app used A LOT of memory over time. 
+When we take a heap dump we can see that our `Contact` class has a lot of instances. (Precisely 10K instances after 10K requests) 
+
 More over, it's "Surviving Generation" metrics keeps on growing and growing, a strong indication of a memory leak.
  
 The root cause is that our `ContactId` class implemented `hashcode` without `equals`.
