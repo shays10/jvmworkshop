@@ -1,5 +1,7 @@
 # [Workshop] Troubleshooting the JVM 
 
+## Before we start
+Make sure you're connected to VPN
 
 ## Objectives & Toolbox
 
@@ -16,9 +18,6 @@ We will learn how to troubleshoot and diagnose JVM issues in our application usi
 `jvisualvm`  - Allows you to monitor and troubleshoot apps on the JVM.
 
 All of them are already installed on your machine if you have JDK installed.
-
-## Before we start
-Connect to VPN
 
 ## Let's Start!
 
