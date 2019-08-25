@@ -57,8 +57,9 @@ Let's open the heap dump and look at the `Classes` tab. What is wrong here?
 
 8. Let's try to simulate faster what will happen overtime. Let's increase the rate of requests
 (by simply looping infinitely) while decreasing the heap size.
-Run `./fast_run.sh` - It will do that for you. Let it run for a minute or two. What is happening?
-In the meanwhile, open the source code in your favorite IDE. (load the `pom.xml` in `/jvmworkshop`). Locate and try to fix the problem.
+Run `./fast_run.sh` - It will do that for you. Let it run until it crashes.
+
+9. Open the source code in your favorite IDE. (load the `pom.xml` in `/jvmworkshop`). Locate and try to fix the problem.
 
 
 Solution [is here](/ContactRetriever/solution/Solution.md)
