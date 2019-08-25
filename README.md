@@ -53,14 +53,13 @@ Let's open the heap dump and look at the `Classes` tab. What is wrong here?
    ![Memory profiling](memoryprofiling.png)
     3. Click on `Memory` to start profiling. Watch the `generations` metric. What are we seeing?
 
-7. Shutdown the process. 
+7. Kill the app. 
 
 8. Let's try to simulate faster what will happen overtime. Let's increase the rate of requests
 (by simply looping infinitely) while decreasing the heap size.
 Run `./fast_run.sh` - It will do that for you. Let it run until it crashes.
 
 9. Open the source code in your favorite IDE. (load the `pom.xml` in `/jvmworkshop`). Locate and try to fix the problem.
-
 
 Solution [is here](/ContactRetriever/solution/Solution.md)
 
