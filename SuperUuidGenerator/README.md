@@ -1,9 +1,9 @@
 ### Fifth App: "SuperUUID Tokens Generator"
-The SuperUUID Tokens Generator App generates a REALLY long String that will represent the context id for
+The SuperUUID Tokens Generator App generates a very long String that will represent the context id for
 the scope of every request that will be made to the server. 
-Obviously, the main requirement is that each request must have its own unique ID.
+The main requirement is that each request must have a unique ID.
 
-To test that it is working properly, Let's run the app and fire requests.
+To test that it is working properly, let's run the app and fire requests.
  
 1. In your terminal navigate to `SuperUuidGenerator` and execute `/.compile.sh` and `./run.sh`. Your Server is now running
 2. Run the `./create_load.sh` script. It will fire 100 requests while printing out their IDs.
