@@ -1,10 +1,10 @@
 
 ### First App: "The Lightweight City Retriever"
 
-The Lightweight City Retriever application allows you to get any city you'd like, and fast!
+The Lightweight City Retriever application allows you to get information on any city you'd like, and fast!
 It introduces a revolutionary cache mechanism that will save you plenty of time and network latency.
 
-When a city request arrives, if the city is already in the cache we will extract it from there. Otherwise,
+When a request for a city arrives, first we'll check if it exists in the cache. If it is still not in the cache, 
 we'll call our remote and slow DB, cache the city and return it.
 
 To test that it is working properly, let's fire up the server and see what happens
