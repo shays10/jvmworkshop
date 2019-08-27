@@ -6,15 +6,15 @@ import scala.collection.immutable.HashMap
 
 class ContactsCache {
 
-  var contacts: Map[ContactId, Contact] = HashMap.empty
+  var cache: Map[ContactId, Contact] = HashMap.empty
 
   def getContact(id: Long): Contact = {
     val contactId = new ContactId(id)
-    contacts.get(contactId) match {
+    cache.get(contactId) match {
       case Some(contact) => contact
       case None =>
         val contact = getContactFromDB(contactId)
-        contacts = contacts + (contactId -> contact)
+        cache = cache + (contactId -> contact)
         contact
     }
   }
