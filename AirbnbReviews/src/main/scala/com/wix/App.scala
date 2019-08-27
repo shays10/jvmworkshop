@@ -3,7 +3,7 @@ package com.wix
 import java.util.concurrent.Executors
 import java.util.concurrent.atomic.AtomicInteger
 
-import scala.concurrent.{ExecutionContext, Future}
+import scala.concurrent.{ExecutionContext, ExecutionContextExecutorService, Future}
 import scala.io.Source
 import scala.util.{Failure, Success}
 
@@ -15,7 +15,7 @@ object App  {
   val negativeKeywords: Set[String] = Set("terrible", "disgusting", "horrific", "bad", "scam", "fraud")
   val REVIEW_COLUMN = 6
 
-  implicit val ec = ExecutionContext.fromExecutorService(Executors.newCachedThreadPool())
+  implicit val ec: ExecutionContextExecutorService = ExecutionContext.fromExecutorService(Executors.newCachedThreadPool())
 
   def main(args: Array[String]) {
     parseReviews()
