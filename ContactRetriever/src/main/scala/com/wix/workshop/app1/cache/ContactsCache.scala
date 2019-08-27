@@ -20,7 +20,7 @@ class ContactsCache {
   }
 
   //This emulates a remote call to DB
-  def getContactFromDB(contactId: ContactId): Contact = {
+  private def getContactFromDB(contactId: ContactId): Contact = {
     // The 'arr' parameter is here to make the Contact object larger. It's not the root cause.
     Contact(contactId.getId, "firstName", "lastName", "address", "city", "zipCode", arr = new Array[String](1024 * 10))
   }
