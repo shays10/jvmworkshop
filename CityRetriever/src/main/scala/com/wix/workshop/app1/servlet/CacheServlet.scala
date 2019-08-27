@@ -2,24 +2,24 @@ package com.wix.workshop.app1.servlet
 
 import java.io.OutputStreamWriter
 
-import com.wix.workshop.app1.cache.ContactsCache
-import com.wix.workshop.app1.model.Contact
+import com.wix.workshop.app1.cache.CityCache
+import com.wix.workshop.app1.model.City
 import javax.servlet.http.{HttpServlet, HttpServletRequest, HttpServletResponse}
 
 class CacheServlet extends HttpServlet {
-  val cache: ContactsCache = new ContactsCache
+  val cache: CityCache = new CityCache
 
   override protected def doGet(req: HttpServletRequest, resp: HttpServletResponse): Unit = {
-    val contact = cache.getContact(req.getParameter("contactId").toLong)
-    createResponse(resp, contact)
+    val city = cache.getCity(req.getParameter("cityId").toLong)
+    createResponse(resp, city)
   }
 
-  private def createResponse(resp:HttpServletResponse, contact: Contact): Unit = {
+  private def createResponse(resp:HttpServletResponse, city: City): Unit = {
     resp.setContentType("text/plain")
     val writer = new OutputStreamWriter(resp.getOutputStream)
-    writer.write("Contact is: ")
+    writer.write("City is: ")
     writer.write("\n")
-    writer.write(contact.toString)
+    writer.write(city.toString)
     writer.close()
   }
 }

@@ -23,7 +23,7 @@ All of them are already installed on your machine if you have JDK installed.
 
 Below you will find a list of sample apps. Simple, yet misbehaving apps. 
 
-1. [The Lightweight Contact Retriever](/ContactRetriever/README.md)
+1. [The Lightweight City Retriever](/CityRetriever/README.md)
 2. [The Always Correct Money Transfer](/MoneyTransfer/README.md)
 3. [Airbnb Reviews Analyzer](/AirbnbReviews/README.md)
 4. [YouTube Likes Calculator](/LikesCalculator/README.md)
