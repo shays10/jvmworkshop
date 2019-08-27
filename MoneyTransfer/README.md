@@ -11,4 +11,4 @@ After completing it will print out the current balance of each account.
 4. You figured out what went wrong, awesome! Open the source code and try to fix the problem (while keeping our app "Always correct"!)
 5. Rerun the app and make sure it completes successfully.
 
-Solution [is here](/MoneyTransfer/solution/Solution.md)
+Solution [is here](solution/Solution.md)

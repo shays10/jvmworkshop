@@ -9,4 +9,4 @@ To test that it is working properly, running our app will analyze only the first
 3. Open the source code, understand the problem and mitigate it. 
 4. Rerun the app to make sure that the issue is solved.
 
-Solution [is here](/AirbnbReviews/solution/Solution.md)
+Solution [is here](solution/Solution.md)

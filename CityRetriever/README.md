@@ -35,4 +35,4 @@ Run `./fast_run.sh` - It will do that for you. Eventually, the app will crash.
 
 9. Open the source code in your favorite IDE. (load the `pom.xml` in `/jvmworkshop`). Locate and try to fix the problem.
 
-Solution [is here](/CityRetriever/solution/Solution.md)
+Solution [is here](solution/Solution.md)

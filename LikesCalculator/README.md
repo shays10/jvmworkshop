@@ -9,4 +9,4 @@ The app goes over the data and calculates the average likes for video per countr
 4. In a separate terminal window run `./create_load.sh`. This will fire 10K requests. 
 5. What is happening? Is there a leak? (Try to use the `Surviving Generations` metric again).
 
-Solution [is here](/LikesCalculator/solution/Solution.md)
+Solution [is here](solution/Solution.md)

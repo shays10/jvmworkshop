@@ -13,4 +13,4 @@ To test that it is working properly, Let's run the app and fire requests.
 6. Open the source code, understand the problem and mitigate it. 
 7. Rerun the app to make sure that the issue is solved.
 
-Solution [is here](/SuperUuidGenerator/solution/Solution.md)
+Solution [is here](solution/Solution.md)
