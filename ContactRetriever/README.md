@@ -21,10 +21,10 @@ Each request will try to retrieve one of the first 10 contacts (So eventually th
 5. Back to JVisualVM. You should see the Heap graph going wild. To investigate further, let's take a heap dump. In JVisualVM: `Monitor` tab -> `Heap dump` (right upper corner) 
 Let's open the heap dump and look at the `Classes` tab. What is wrong here? 
 
-6. Let's try to gather the "![Surviving Generations](https://blogs.oracle.com/nbprofiler/what-do-the-surviving-generations-metrics-mean)" metric: 
+6. Let's try to gather the "[Surviving Generations](https://blogs.oracle.com/nbprofiler/what-do-the-surviving-generations-metrics-mean)" metric: 
     1. Make sure the app is still running and creating contacts
     2. Go to `Profiler` tab and configure your setting as follows:
-   ![Memory profiling](../memoryprofiling.png)
+   ![Memory profiling][../memoryprofiling.png]
     3. Click on `Memory` to start profiling. Watch the `generations` metric. What are we seeing?
 
 7. Kill the app. 
