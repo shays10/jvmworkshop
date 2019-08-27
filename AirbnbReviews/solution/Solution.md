@@ -16,7 +16,7 @@ A quick solution is to just use a fixed thread pool that limits the max numbers 
    Executors.newFixedThreadPool(10)
 ```
 
-If we'll want to use a threadpool that limits it's thread count to the # of available processors, use this:
+If we'll want to use a thread pool that limits its thread count to the # of available processors, use this:
 ```
    Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors())
 ```
