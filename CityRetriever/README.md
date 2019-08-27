@@ -31,7 +31,7 @@ Let's open the heap dump and look at the `Classes` tab. What is wrong here?
 
 8. Let's try to simulate faster what will happen over time. Let's increase the rate of requests
 (by simply looping infinitely) while decreasing the heap size.
-Run `./fast_run.sh` - It will do that for you. Eventually, the app will crash.
+Run `./fast_run.sh` - It will do that for you. Sooner or later, the app will crash.
 
 9. Open the source code in your favorite IDE. (load the `pom.xml` in `/jvmworkshop`). Locate and try to fix the problem.
 
