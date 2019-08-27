@@ -18,7 +18,7 @@ To test that it is working properly, let's fire up the server and see what happe
 4. run `./create_load.sh`, It will create 10K requests. 
 Each request will try to retrieve one of the first 10 contacts (So eventually there should be no more than 10 contacts in our Cache)
 
-5. Back to JVisualVM. You should see the Heap graph going wild. To investigate further, let's take a heap dump. In JVisualVM: `Monitor` tab -> `Heap dump` (right upper corner) 
+5. Back to JVisualVM. You should see the Heap graph going wild. To investigate further, let's take a heap dump. In JVisualVM: `Monitor` tab -> `Heap dump` (right upper corner). 
 Let's open the heap dump and look at the `Classes` tab. What is wrong here? 
 
 6. Let's try to gather the "[Surviving Generations](https://blogs.oracle.com/nbprofiler/what-do-the-surviving-generations-metrics-mean)" metric: 
