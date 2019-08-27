@@ -20,7 +20,6 @@ We will learn how to troubleshoot and diagnose JVM issues in our application usi
 All of them are already installed on your machine if you have JDK installed.
 
 ## Let's Start!
-
 Below you will find a list of sample apps. Simple, yet misbehaving apps. 
 
 1. [The Lightweight City Retriever](/CityRetriever/README.md)
@@ -31,4 +30,8 @@ Below you will find a list of sample apps. Simple, yet misbehaving apps.
 
 
 ## Reading Materials
+[How do I take heap dumps in production machines?](https://stackoverflow.com/c/wix/questions/251) 
 
+[Udemy Course - Java Memory Management](https://wix2019.udemy.com/java-memory-management/learn/lecture/6125082#overview)
+
+["Surviving Generations" metric - explained](https://blogs.oracle.com/nbprofiler/what-do-the-surviving-generations-metrics-mean)
