@@ -15,13 +15,14 @@ To test that it is working properly, let's fire up the server and see what happe
 
 3. Open `jvisualvm` (From terminal), locate your app and go to the `Monitor` tab. 
 
-4. run `./create_load.sh`, It will create 10K requests. Each request will try to retrieve one of the first 10 contacts.
+4. run `./create_load.sh`, It will create 10K requests. 
+Each request will try to retrieve one of the first 10 contacts (So there should be no more than 10 contacts in our Cache)
 
 5. Back to JVisualVM. You should see the Heap graph going wild.
-To investigate further, let's take a heap dump. Try one of the following methods:
-    * JVisualVM: `Monitor` tab -> `Heap dump` (right upper corner)
-    * jmap. (By running `jmap -dump:live,file=<filename> <pid>`)  
-Let's open the heap dump and look at the `Classes` tab. What is wrong here?  
+To investigate further, let's take a heap dump. In JVisualVM: `Monitor` tab -> `Heap dump` (right upper corner)
+
+Let's open the heap dump and look at the `Classes` tab. What is wrong here? 
+
 6. Let's try to gather the "[Surviving Generations](https://blogs.oracle.com/nbprofiler/what-do-the-surviving-generations-metrics-mean)" metric: 
     1. Make sure the app is still running and creating contacts
     2. Go to `Profiler` tab and configure your setting as follows:
