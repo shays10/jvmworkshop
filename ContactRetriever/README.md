@@ -9,7 +9,7 @@ we'll call our remote and slow DB, cache the contact and return it.
 
 To test that it is working properly, let's fire up the server and see what happens
 
-1. In your terminal navigate to `ContactRetriever`, execute `./compile.sh` and `./run.sh`. Your jetty server should be up and running.
+1. In your terminal navigate to `ContactRetriever`, execute `./compile.sh` and `./run.sh`. Your Jetty server should be up and running.
 
 2. In a separate terminal window, locate your PID via `jps`.
 
