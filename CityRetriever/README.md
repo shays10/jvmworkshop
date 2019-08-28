@@ -25,7 +25,7 @@ Let's open the heap dump and look at the `Classes` tab. What is wrong here?
     1. Make sure that the app is still receiving traffic (`create_load` is still running)
     2. Go to the `Profiler` tab and configure your setting as follows:
    ![Memory profiling](../memoryprofiling.png)
-    3. Click on `Memory` to start profiling. Watch the `generations` metric. What are we seeing?
+    3. Click on `Memory` to start profiling. Sort according to the `generations` metric. What are we seeing?
 
 7. Kill the app. 
 
