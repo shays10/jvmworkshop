@@ -15,7 +15,7 @@ To test that it is working properly, let's fire up the server and see what happe
 
 3. Open `jvisualvm` (From terminal), locate your app and go to the `Monitor` tab. 
 
-4. run `./create_load.sh`, It will create 10K requests. 
+4. Run `./create_load.sh` from terminal. It will create 10K requests. 
 Each request will try to retrieve one of the first 10 cities (So eventually there should be no more than 10 cities in our cache)
 
 5. Back to JVisualVM. You should see the Heap graph going wild. To investigate further, let's take a heap dump. In JVisualVM: `Monitor` tab -> `Heap dump` (right upper corner). 
