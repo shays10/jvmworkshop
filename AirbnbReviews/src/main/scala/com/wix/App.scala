@@ -48,5 +48,5 @@ object App  {
     })
   }
 
-  def executeSuperComplexStuff(): Unit = Thread.sleep(3000)
+  def executeSuperComplexStuff(): Unit = Thread.sleep(500)
 }
