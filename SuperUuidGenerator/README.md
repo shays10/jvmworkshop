@@ -18,7 +18,7 @@ To test that it is working properly, let's run the app and fire requests.
 6. Navigate to the "Object Query Language" tab
  ![OQL](../OQL.png)
 7. [Create a query](http://cr.openjdk.java.net/~sundar/8022483/webrev.01/raw_files/new/src/share/classes/com/sun/tools/hat/resources/oqlhelp.html) 
-to find out if there are instances that were not GCed of the class that is holding our UUID (`com.wix.app5.model.SuperUuidWrapper`)
+to find out if there are instances that were not GCed of the class that is holding our UUIDs (`com.wix.app5.model.SuperUuidWrapper`)
 8. Open the source code, understand the problem and mitigate it. 
 9. Rerun the app to make sure that the issue is solved.
 
