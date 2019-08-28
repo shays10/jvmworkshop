@@ -6,7 +6,7 @@ You probably noticed that our app is misbehaving.
 Even though we just requested 10 unique cities, our app used A LOT of memory over time. 
 When we take a heap dump we can see that our `City` class has a lot of instances. (Precisely 10K instances after 10K requests) 
 
-Moreover, it's "Surviving Generation" metrics keeps on growing and growing, a strong indication of a memory leak.
+Moreover, its "Surviving Generation" metrics keeps on growing and growing, a strong indication of a memory leak.
  
 The root cause is that our `CityId` class implemented `hashcode` without `equals`.
 Failing to do so causes our Cache (that is based on a `HashMap`) to misbehave and act like a `List`, storing duplicate values.
