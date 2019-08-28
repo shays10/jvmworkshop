@@ -6,7 +6,7 @@ If we would analyze more than 3K reviews we will hit `Exception in thread "main"
 (Don't do that. We tried. It will make your Mac restart :) )
 
 Analyzing a thread dump with fastthread.io shows the following unpleasent message:
-![High number of threads](/threads.png)
+![High number of threads](threads.png)
 
 ### Why?
  
