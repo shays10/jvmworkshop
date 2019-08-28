@@ -18,5 +18,5 @@ case class CityId(id: Long)
 ```
 In a `case class`, `equals` and `hashcode` are overridden for us, by default.
 
-If you will run the app again you will see that memory graph looks like it should, and
+If you will compile and run the app again you will see that memory graph looks like it should, and
 if you will take a heap dump will see exactly 10 instances of `City`
