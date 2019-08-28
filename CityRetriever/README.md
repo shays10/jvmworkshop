@@ -22,7 +22,7 @@ Each request will try to retrieve one of the first 10 cities (So eventually ther
 Let's open the heap dump and look at the `Classes` tab. What is wrong here? 
 
 6. Let's try to gather the "[Surviving Generations](https://blogs.oracle.com/nbprofiler/what-do-the-surviving-generations-metrics-mean)" metric: 
-    1. Make sure the app is still running and retrieving cities
+    1. Make sure that the app is still receiving traffic (`create_load` is still running)
     2. Go to the `Profiler` tab and configure your setting as follows:
    ![Memory profiling](../memoryprofiling.png)
     3. Click on `Memory` to start profiling. Watch the `generations` metric. What are we seeing?
