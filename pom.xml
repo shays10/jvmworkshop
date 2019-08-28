@@ -8,7 +8,6 @@
     <module>CityRetriever</module>
     <module>MoneyTransfer</module>
     <module>AirbnbReviews</module>
-    <module>LikesCalculator</module>
     <module>SuperUuidGenerator</module>
   </modules>
 </project>

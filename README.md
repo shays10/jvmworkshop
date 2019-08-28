@@ -25,8 +25,7 @@ Below you will find a list of sample apps. Simple, yet misbehaving apps.
 1. [The Lightweight City Retriever](/CityRetriever/README.md)
 2. [The Always Correct Money Transfer](/MoneyTransfer/README.md)
 3. [Airbnb Reviews Analyzer](/AirbnbReviews/README.md)
-4. [YouTube Likes Calculator](/LikesCalculator/README.md)
-5. [SuperUUID Tokens Generator](/SuperUuidGenerator/README.md)
+4. [SuperUUID Tokens Generator](/SuperUuidGenerator/README.md)
 
 
 ## Reading Materials
