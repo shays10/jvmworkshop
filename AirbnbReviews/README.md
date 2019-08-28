@@ -2,7 +2,7 @@
 The Airbnb Reviews Analyzer is an app that can read a CSV file that contains reviews on an Airbnb property, parse it
 and figure out how many positive and negative reviews are there, using a super complex algorithm! 
 
-To test that it is working properly, running our app will analyze only the first 2K reviews (out of ~200K reviews)
+To test that it is working properly, running our app will analyze only the first 1K reviews (out of ~200K reviews)
 
 1. In your terminal navigate to `AirbnbReviews` execute `./compile.sh` and `./run.sh`. 
 2. Again, go to the `Monitor` tab in `JVisualVM`. What is wrong? There's one metric that is abnormal.

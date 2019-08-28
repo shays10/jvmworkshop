@@ -18,12 +18,13 @@ object App  {
   implicit val ec: ExecutionContextExecutorService = ExecutionContext.fromExecutorService(Executors.newCachedThreadPool())
 
   def main(args: Array[String]) {
+    println("Analyzing Reviews....")
     parseReviews()
   }
 
   private def parseReviews(): Unit = {
     val source = Source.fromResource("reviews.csv")
-    val analyzedReviews: Set[Future[Unit]] = source.getLines().take(2000).map { analyzeLine }.toSet
+    val analyzedReviews: Set[Future[Unit]] = source.getLines().take(1000).map { analyzeLine }.toSet
     Future.sequence(analyzedReviews).onComplete( {
       case Success(_) =>
         println(s"Positive Reviews: ${positiveReviews.get()}")
@@ -35,10 +36,10 @@ object App  {
 
 
   private def analyzeLine(line: String) = Future {
+    executeSuperComplexStuff()
     val cols = line.split(",").map(_.trim)
 
     cols.lift(REVIEW_COLUMN).foreach(review => {
-      executeSuperComplexStuff()
       if (positiveKeywords.exists(review.contains(_))) {
         positiveReviews.incrementAndGet()
       }
