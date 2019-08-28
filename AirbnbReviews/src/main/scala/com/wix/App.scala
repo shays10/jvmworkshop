@@ -13,7 +13,7 @@ object App  {
   val negativeReviews: AtomicInteger = new AtomicInteger()
   val positiveKeywords: Set[String] = Set("amazing", "awesome", "great", "divine", "perfect", "good")
   val negativeKeywords: Set[String] = Set("terrible", "disgusting", "horrific", "bad", "scam", "fraud")
-  val REVIEW_COLUMN = 6
+  val REVIEW_COLUMN = 5
 
   implicit val ec: ExecutionContextExecutorService = ExecutionContext.fromExecutorService(Executors.newCachedThreadPool())
 
@@ -23,7 +23,7 @@ object App  {
 
   private def parseReviews(): Unit = {
     val source = Source.fromResource("reviews.csv")
-    val analyzedReviews: Set[Future[Unit]] = source.getLines().take(3000).map { analyzeLine }.toSet
+    val analyzedReviews: Set[Future[Unit]] = source.getLines().take(2000).map { analyzeLine }.toSet
     Future.sequence(analyzedReviews).onComplete( {
       case Success(_) =>
         println(s"Positive Reviews: ${positiveReviews.get()}")
