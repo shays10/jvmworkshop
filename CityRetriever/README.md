@@ -35,6 +35,6 @@ Run `./fast_run.sh` - It will do that for you. Sooner or later, the app will cra
 
 9. Open the source code in your favorite IDE. (load the `pom.xml` in `/jvmworkshop`). Locate and try to fix the problem.
 
-10. Compile and run again to make sure the problem in solved.
+10. Compile and run again to make sure the problem is solved.
 
 Solution [is here](solution/Solution.md)
