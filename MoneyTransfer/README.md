@@ -12,4 +12,5 @@ After completing it will print out the current balance of each account.
 5. Rerun the app and make sure it completes successfully.
 
 Hint [is here](solution/Hint.md)
+
 Solution [is here](solution/Solution.md)
