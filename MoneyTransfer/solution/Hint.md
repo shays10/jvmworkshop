@@ -1,4 +1,4 @@
-# "The Always Correct Money Transfer App" - Solution
+# "The Always Correct Money Transfer App" - Hint
 
 As you already figured out, our app isn't working properly as it never completes.
 In order to protect our accounts we have to make sure our `transfer` method is atomic. In order to make sure 
