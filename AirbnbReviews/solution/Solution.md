@@ -5,7 +5,8 @@ You probably noticed that our app is using very high number of threads.
 If we would analyze more than 3K reviews we will hit `Exception in thread "main" java.lang.OutOfMemoryError: unable to create new native thread`
 (Don't do that. We tried. It will make your Mac restart :) )
 
-Analyzing a thread dump with fastthread.io shows the following unpleasent message:
+Analyzing a thread dump with [](fastthread.io) shows the following unpleasent message:
+
 ![High number of threads](threads.png)
 
 ### Why?
