@@ -8,3 +8,5 @@ By doing so we created a deadlock since our threads are acquiring resources and 
 other thread's resources without releasing their own. In short, we have a cycle. 
 
 Whenever resources are acquired in the same order there is no danger of deadlock.
+
+Fix your app so your locks will be properly ordered - so no cycle can occur.
