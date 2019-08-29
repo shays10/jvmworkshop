@@ -19,7 +19,7 @@ To test that it is working properly, let's fire up the server and see what happe
 Each request will try to retrieve one of the first 10 cities (So eventually there should be no more than 10 cities in our cache)
 
 5. Back to JVisualVM. You should see the Heap graph going wild. To investigate further, let's take a heap dump. In JVisualVM: `Monitor` tab -> `Heap dump` (right upper corner). 
-Let's open the heap dump and look at the `Classes` tab. What is wrong here? 
+Let's open the heap dump and look at the `Classes` tab. What is wrong here? (Look for the `City` instances..)
 
 6. Let's try to gather the "[Surviving Generations](https://blogs.oracle.com/nbprofiler/what-do-the-surviving-generations-metrics-mean)" metric: 
     1. Make sure that the app is still receiving traffic (`create_load` is still running)
