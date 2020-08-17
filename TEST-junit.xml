@@ -1,13 +1,17 @@
-<?xml version="1.0" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-    <testsuite errors="0" failures="0" name="my test suite" tests="1">
-        <testcase classname="some.class.name" name="Test1" time="123.345000">
-            <system-out>
-                I am stdout!
-            </system-out>
-            <system-err>
-                I am stderr!
-            </system-err>
-        </testcase>
-    </testsuite>
+   <testsuite errors="2" failures="0" name="suite1" skipped="1" tests="3" time="0">
+      <properties>
+         <property name="build" value="55" />
+      </properties>
+      <testcase name="case1">
+         <skipped />
+      </testcase>
+      <testcase name="case2">
+         <error message="Oh no I failed :(" type="the_error_type" />
+      </testcase>
+      <testcase name="case3">
+         <error message="And I failed as well!" type="the_error_type" />
+      </testcase>
+   </testsuite>
 </testsuites>
