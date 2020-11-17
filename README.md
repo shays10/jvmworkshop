@@ -3,7 +3,7 @@
 ## Before we start
 Make sure you're connected to VPN
 
-## Objectives & Toolbox
+## Objectives & Toolbox 
 
 In today's workshop we will simulate common use cases of JVM problems you might run into when your application misbehaves.
 
